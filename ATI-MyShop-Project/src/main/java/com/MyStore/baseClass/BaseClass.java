@@ -7,7 +7,10 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+
+import com.MyStore.actionDriver.Action;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -17,13 +20,13 @@ public class BaseClass {
 	
 	public static Properties properties;
 	
-	@BeforeTest
+	@BeforeClass
 	public void loadConfig()
 	{
 		properties = new Properties();
 		
 		try {
-			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//Configuration/Config.properties");
+			FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\Configuration\\Config.properties");
 			properties.load(fis);
 			
 		} catch (Exception e) {
@@ -48,9 +51,11 @@ public class BaseClass {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+		Action.implicitWait(driver, 10);
+		Action.pageLoad(driver, 50);
 		driver.get(properties.getProperty("BaseURL"));
+		
+		
 	}
 	
 

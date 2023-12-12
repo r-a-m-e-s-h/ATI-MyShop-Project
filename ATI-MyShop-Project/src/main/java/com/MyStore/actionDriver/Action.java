@@ -1,16 +1,33 @@
 package com.MyStore.actionDriver;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.MyStore.baseClass.BaseClass;
 
 public class Action extends BaseClass  {
+	
+	public static void quit(WebDriver ldriver)
+	{
+		ldriver.quit();
+	}
 
+	public static void pageLoad(WebDriver ldriver, int seconds)
+	{
+		ldriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(seconds));
+	}
+	
+	public static void implicitWait(WebDriver ldriver, int second)
+	{
+		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(second));
+	}
 
 	public static void click(WebDriver ldriver, WebElement element)
 	{
@@ -31,7 +48,7 @@ public class Action extends BaseClass  {
 		finally {
 			if(flag=true)
 			{
-				System.out.println("Successfully element is found at ");
+				System.out.println("Successfully element is found at "+element);
 			}
 			else
 			{
@@ -210,8 +227,129 @@ public class Action extends BaseClass  {
 		}
 
 	}
-	//public static void 
+	public static boolean SelectByVisibleText(WebElement element,String txt)
+	{
+		boolean flag= false;
 
+		try {
+
+			Select select= new Select(element);
+			select.selectByVisibleText(txt);;
+			flag=true;
+			return true;
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+		finally {
+			if (flag) {
+				System.out.println("Valueselected");
+			}
+			else
+			{
+				System.out.println("value not selected ");
+			}
+		}
+
+	}
+	public static void JSClick(WebElement element,WebDriver ldriver)
+	{
+		boolean flag=false;
+		
+		try {
+			JavascriptExecutor e = (JavascriptExecutor)ldriver;
+			e.executeScript("arguments[0].click()", element);
+			flag = true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw e;
+		}
+		finally {
+			if(flag)
+			{
+				System.out.println("js clickis perfomed");
+			}
+			else
+			{
+				
+			}
+		}
+			
+	}
+	public static boolean switchToFrameByIndex(int index)
+	{
+		boolean flag=false;
+		try {
+			new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
+			driver.switchTo().frame(index);
+			flag=true;					
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+		finally {
+			if(flag)
+			{
+				System.out.println("Frame is Selcted");
+			}
+			else
+			{
+				System.out.println("Frame is not Selcted");
+				
+			}
+		}
+	}
+	public static boolean switchToFrameByName(String txt)
+	{
+		boolean flag=false;
+		try {
+			new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
+			driver.switchTo().frame(txt);
+			flag=true;					
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+		finally {
+			if(flag)
+			{
+				System.out.println("Frame is Selcted");
+			}
+			else
+			{
+				System.out.println("Frame is not Selcted");
+				
+			}
+		}
+	}
+	public static boolean switchToDefaultFrame()
+	{
+		boolean flag=false;
+		try {
+			new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
+			driver.switchTo().defaultContent();
+			flag=true;					
+			return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+		finally {
+			if(flag)
+			{
+				System.out.println("Frame is Selcted");
+			}
+			else
+			{
+				System.out.println("Frame is not Selcted");
+				
+			}
+		}
+	}
 
 
 }
