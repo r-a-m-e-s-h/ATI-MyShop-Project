@@ -8,15 +8,15 @@ import com.MyStore.actionDriver.Action;
 import com.MyStore.baseClass.BaseClass;
 
 public class OrderConfirmationPage extends BaseClass {
-	
+
 	public OrderConfirmationPage() {
 		// TODO Auto-generated constructor stub
-	PageFactory.initElements(driver,  this);
+		PageFactory.initElements(driver,  this);
 	}
-	
+
 	@FindBy(xpath="//*[text()='Your order on My Shop is complete.']")
 	WebElement orderSuccessText;
-	
+
 	public String ValidateOrderSuccessTxt()
 	{
 		String txt = orderSuccessText.getText();
