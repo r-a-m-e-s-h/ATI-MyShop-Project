@@ -14,6 +14,8 @@ import com.MyStore.baseClass.BaseClass;
 
 public class Action extends BaseClass  {
 	
+	
+	
 	public static void quit(WebDriver ldriver)
 	{
 		ldriver.quit();
@@ -28,11 +30,12 @@ public class Action extends BaseClass  {
 	{
 		ldriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(second));
 	}
+	
 
 	public static void click(WebDriver ldriver, WebElement element)
 	{
 		Actions actions = new Actions(ldriver);
-		actions.moveToElement(element).build().perform();
+		actions.moveToElement(element).click().build().perform();
 	}
 
 	public static boolean findElement(WebDriver ldriver,WebElement element)

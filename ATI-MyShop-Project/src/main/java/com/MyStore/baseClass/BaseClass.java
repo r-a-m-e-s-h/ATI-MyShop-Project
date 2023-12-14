@@ -20,7 +20,7 @@ public class BaseClass {
 	
 	public static Properties properties;
 	
-	@BeforeClass
+	@BeforeTest
 	public void loadConfig()
 	{
 		properties = new Properties();

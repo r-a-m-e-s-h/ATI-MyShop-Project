@@ -1,1 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "MyShop Test Suite">
+
+<test name = "MyShop Test">
+
+<classes>
+
+
+<class name="com.MyStore.testCases.IndexTestCase" />
+<class name="com.MyStore.testCases.LoginTestCase" />
+<class name ="com.MyStore.testCases.HomepageTestCase" />
+<class name ="com.MyStore.testCases.AccountCreationPageTestCase" />
+
+</classes>
+
+
+
+
+
+</test>
+
+
+
+</suite>

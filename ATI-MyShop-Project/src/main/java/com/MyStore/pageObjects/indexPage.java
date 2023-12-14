@@ -14,7 +14,7 @@ public class indexPage extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//a[contains(text(),\"Sign in\")]")
+	@FindBy(xpath="//div[@class='header_user_info']//a")
 	WebElement signinBtn;
 	
 	@FindBy(xpath="//img[@class=\"logo img-responsive\"]")
@@ -28,8 +28,13 @@ public class indexPage extends BaseClass{
 	
 	public LoginPage clickSigin()
 	{
-		Action.click(driver, signinBtn);
-		return new LoginPage();
+		
+		  Action.click(driver, signinBtn); 
+		  return new LoginPage();
+		 
+		/*
+		 * signinBtn.click(); return new LoginPage();
+		 */
 	}
 	public boolean validateLogo() {
 		return Action.isDisplayed(driver, logo);

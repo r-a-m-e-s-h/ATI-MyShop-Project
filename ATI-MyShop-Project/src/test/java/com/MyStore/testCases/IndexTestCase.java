@@ -9,7 +9,7 @@ import com.MyStore.actionDriver.Action;
 import com.MyStore.baseClass.BaseClass;
 import com.MyStore.pageObjects.indexPage;
 
-public class indexTestCase extends BaseClass{
+public class IndexTestCase extends BaseClass{
 	
 	indexPage ip;
 	
@@ -25,6 +25,7 @@ public class indexTestCase extends BaseClass{
 		ip =  new indexPage();			
 		boolean result = ip.validateLogo();
 		Assert.assertTrue(result);	
+		System.out.println("The Logo is Displayed");
 	}
 	@Test
 	public void verifyTitle()
@@ -32,6 +33,7 @@ public class indexTestCase extends BaseClass{
 		ip =  new indexPage();
 		String title = ip.getTitle();
 		Assert.assertEquals(title, "My Shop");
+		System.out.println("The Page Title is : "+title);
 	}
 	
 	@AfterMethod
@@ -40,5 +42,5 @@ public class indexTestCase extends BaseClass{
 		Action.quit(driver);
 	}
 	
-
+	
 }
