@@ -7,19 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 import com.MyStore.actionDriver.Action;
 import com.MyStore.baseClass.BaseClass;
 
-public class AccountCreationPage extends BaseClass {
+public class AddressPage extends BaseClass {
 	
-	public AccountCreationPage() {
+	public AddressPage() {
 		// TODO Auto-generated constructor stub
-		PageFactory.initElements(driver, this);
+	PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//h1[text()=\"Create an account\"]")
-	WebElement formhHeader;
+	@FindBy(xpath="//span[text()='Proceed to checkout']")
+	WebElement checkOutBtn;
 	
-	public boolean validateHeader()
+	public ShippingPage clickOnCheckOutBtn()
 	{
-		return Action.isDisplayed(driver, formhHeader);
+		Action.click(driver, checkOutBtn);
+		return new ShippingPage();
 	}
 
 }

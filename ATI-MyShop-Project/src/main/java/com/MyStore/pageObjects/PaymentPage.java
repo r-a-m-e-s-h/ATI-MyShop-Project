@@ -7,19 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 import com.MyStore.actionDriver.Action;
 import com.MyStore.baseClass.BaseClass;
 
-public class AccountCreationPage extends BaseClass {
-	
-	public AccountCreationPage() {
+public class PaymentPage extends BaseClass{
+
+	public PaymentPage() {
 		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//h1[text()=\"Create an account\"]")
-	WebElement formhHeader;
+	@FindBy(xpath="//a[contains(text(),'Pay by bank wire')]")
+	WebElement bankWireBtn;
 	
-	public boolean validateHeader()
+	public OrderSummaryPage clickOnBankWireBtn()
 	{
-		return Action.isDisplayed(driver, formhHeader);
+		Action.click(driver, bankWireBtn);
+		return new OrderSummaryPage();
 	}
 
 }

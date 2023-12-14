@@ -7,34 +7,21 @@ import org.openqa.selenium.support.PageFactory;
 import com.MyStore.actionDriver.Action;
 import com.MyStore.baseClass.BaseClass;
 
-public class searchResultPage extends BaseClass {
+public class AddToCartPage extends BaseClass{
 	
-	public searchResultPage() {
+	public AddToCartPage() {
 		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//a[@class=\"product_img_link\"]//following::img")
-	WebElement searchResultProduct;
-	
 	@FindBy(xpath="//a//span[text()='More']")
 	WebElement Morebtn;
-	
-	
-	public boolean validateSearchProductDisplayed()
-	{
-		return Action.isDisplayed(driver, searchResultProduct);
-	}
-	
-	public AddToCartPage clickOnSearchResultProduct()
-	{
-		Action.click(driver, searchResultProduct);
-		return new AddToCartPage();
-	}
 	
 	public MorePage clickOnMoreBtn()
 	{
 		Action.click(driver, Morebtn);
 		return new MorePage();
 	}
+	
+
 }

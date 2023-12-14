@@ -23,10 +23,10 @@ public class LoginPage extends BaseClass {
 	WebElement loginBtn;
 	
 	@FindBy(xpath="//input[@id=\"email_create\"]")
-	WebElement newUsertxtBox;
+	WebElement createNewUsertxtBox;
 	
 	@FindBy(xpath="//button[@id=\"SubmitCreate\"]")
-	WebElement newUserbtn;
+	WebElement createNewUserbtn;
 	
 	public HomePage login(String name,String pass)
 	{
@@ -35,10 +35,17 @@ public class LoginPage extends BaseClass {
 		Action.click(driver, loginBtn);
 		return new HomePage();
 	}
+	public AddressPage login_For_AddressPage(String name,String pass)
+	{
+		Action.type(username, name);
+		Action.type(pwd, pass);
+		Action.click(driver, loginBtn);
+		return new AddressPage();
+	}
 	public AccountCreationPage createNewUserAccount(String txt)
 	{
-		Action.type(newUsertxtBox, txt);
-		Action.click(driver, newUserbtn);
+		Action.type(createNewUsertxtBox, txt);
+		Action.click(driver, createNewUserbtn);
 		return new AccountCreationPage();
 	}
 	
