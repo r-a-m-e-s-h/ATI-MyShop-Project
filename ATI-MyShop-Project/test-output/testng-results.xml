@@ -1,29 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="7" total="17" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-15T22:56:39 IST" name="Default suite" finished-at="2023-12-15T22:57:20 IST" duration-ms="41279">
+  <suite started-at="2023-12-16T00:31:27 IST" name="MyShop Test Suite" finished-at="2023-12-16T00:33:43 IST" duration-ms="135988">
     <groups>
     </groups>
-    <test started-at="2023-12-15T22:56:39 IST" name="Default test" finished-at="2023-12-15T22:57:20 IST" duration-ms="41279">
-      <class name="com.MyStore.testCases.EndToEndTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.MyStore.testCases.EndToEndTest@6392827e]" started-at="2023-12-15T22:56:39 IST" name="loadConfig" finished-at="2023-12-15T22:56:39 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.EndToEndTest@6392827e]" started-at="2023-12-15T22:56:39 IST" name="setup" finished-at="2023-12-15T22:56:50 IST" duration-ms="10649" status="PASS">
+    <test started-at="2023-12-16T00:31:27 IST" name="MyShop Test" finished-at="2023-12-16T00:33:43 IST" duration-ms="135988">
+      <class name="com.MyStore.testCases.HomepageTestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.HomepageTestCase@4803b726]" started-at="2023-12-16T00:32:00 IST" name="setup" finished-at="2023-12-16T00:32:10 IST" duration-ms="9985" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="endToendTest()[pri:0, instance:com.MyStore.testCases.EndToEndTest@6392827e]" started-at="2023-12-15T22:56:50 IST" name="endToendTest" finished-at="2023-12-15T22:57:20 IST" duration-ms="30239" status="PASS">
+        <test-method signature="oderHistoryTest()[pri:0, instance:com.MyStore.testCases.HomepageTestCase@4803b726]" started-at="2023-12-16T00:32:10 IST" name="oderHistoryTest" finished-at="2023-12-16T00:32:12 IST" duration-ms="2607" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endToendTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.EndToEndTest@6392827e]" started-at="2023-12-15T22:57:20 IST" name="tearDown" finished-at="2023-12-15T22:57:20 IST" duration-ms="347" status="PASS">
+        </test-method> <!-- oderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.HomepageTestCase@4803b726]" started-at="2023-12-16T00:32:12 IST" name="tearDown" finished-at="2023-12-16T00:32:12 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.MyStore.testCases.EndToEndTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.HomepageTestCase@4803b726]" started-at="2023-12-16T00:32:12 IST" name="setup" finished-at="2023-12-16T00:32:21 IST" duration-ms="8992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="personalInformationTest()[pri:0, instance:com.MyStore.testCases.HomepageTestCase@4803b726]" started-at="2023-12-16T00:32:21 IST" name="personalInformationTest" finished-at="2023-12-16T00:32:24 IST" duration-ms="2561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- personalInformationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.HomepageTestCase@4803b726]" started-at="2023-12-16T00:32:24 IST" name="tearDown" finished-at="2023-12-16T00:32:24 IST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.HomepageTestCase -->
+      <class name="com.MyStore.testCases.SearchResultPageTestCase">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.MyStore.testCases.SearchResultPageTestCase@53ce1329]" started-at="2023-12-16T00:32:34 IST" name="setUp" finished-at="2023-12-16T00:32:40 IST" duration-ms="5278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="productAvailabilityTest()[pri:0, instance:com.MyStore.testCases.SearchResultPageTestCase@53ce1329]" started-at="2023-12-16T00:32:40 IST" name="productAvailabilityTest" finished-at="2023-12-16T00:32:41 IST" duration-ms="1088" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productAvailabilityTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.SearchResultPageTestCase@53ce1329]" started-at="2023-12-16T00:32:41 IST" name="tearDown" finished-at="2023-12-16T00:32:41 IST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.SearchResultPageTestCase -->
+      <class name="com.MyStore.testCases.LoginTestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.LoginTestCase@f0da945]" started-at="2023-12-16T00:31:49 IST" name="setup" finished-at="2023-12-16T00:31:57 IST" duration-ms="8119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest()[pri:0, instance:com.MyStore.testCases.LoginTestCase@f0da945]" started-at="2023-12-16T00:31:57 IST" name="loginTest" finished-at="2023-12-16T00:31:59 IST" duration-ms="2726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.LoginTestCase@f0da945]" started-at="2023-12-16T00:31:59 IST" name="tearDown" finished-at="2023-12-16T00:32:00 IST" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.LoginTestCase -->
+      <class name="com.MyStore.testCases.OrderPageTestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.OrderPageTestCase@729d991e]" started-at="2023-12-16T00:33:12 IST" name="setup" finished-at="2023-12-16T00:33:22 IST" duration-ms="10381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPriceTest()[pri:0, instance:com.MyStore.testCases.OrderPageTestCase@729d991e]" started-at="2023-12-16T00:33:22 IST" name="verifyPriceTest" finished-at="2023-12-16T00:33:42 IST" duration-ms="20379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPriceTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.OrderPageTestCase@729d991e]" started-at="2023-12-16T00:33:42 IST" name="tearDown" finished-at="2023-12-16T00:33:43 IST" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.OrderPageTestCase -->
+      <class name="com.MyStore.testCases.AccountCreationPageTestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.AccountCreationPageTestCase@ffaa6af]" started-at="2023-12-16T00:32:24 IST" name="setup" finished-at="2023-12-16T00:32:32 IST" duration-ms="7710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAccountCreationTest()[pri:0, instance:com.MyStore.testCases.AccountCreationPageTestCase@ffaa6af]" started-at="2023-12-16T00:32:32 IST" name="verifyAccountCreationTest" finished-at="2023-12-16T00:32:34 IST" duration-ms="2401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAccountCreationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.AccountCreationPageTestCase@ffaa6af]" started-at="2023-12-16T00:32:34 IST" name="tearDown" finished-at="2023-12-16T00:32:34 IST" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.AccountCreationPageTestCase -->
+      <class name="com.MyStore.testCases.IndexTestCase">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.MyStore.testCases.IndexTestCase@434a63ab]" started-at="2023-12-16T00:31:27 IST" name="loadConfig" finished-at="2023-12-16T00:31:27 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfig -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.IndexTestCase@434a63ab]" started-at="2023-12-16T00:31:27 IST" name="setup" finished-at="2023-12-16T00:31:40 IST" duration-ms="13539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validateLogo()[pri:0, instance:com.MyStore.testCases.IndexTestCase@434a63ab]" started-at="2023-12-16T00:31:40 IST" name="validateLogo" finished-at="2023-12-16T00:31:40 IST" duration-ms="114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLogo -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.IndexTestCase@434a63ab]" started-at="2023-12-16T00:31:40 IST" name="tearDown" finished-at="2023-12-16T00:31:40 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.IndexTestCase@434a63ab]" started-at="2023-12-16T00:31:40 IST" name="setup" finished-at="2023-12-16T00:31:48 IST" duration-ms="8081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyTitle()[pri:0, instance:com.MyStore.testCases.IndexTestCase@434a63ab]" started-at="2023-12-16T00:31:48 IST" name="verifyTitle" finished-at="2023-12-16T00:31:48 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.IndexTestCase@434a63ab]" started-at="2023-12-16T00:31:48 IST" name="tearDown" finished-at="2023-12-16T00:31:49 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.IndexTestCase -->
+      <class name="com.MyStore.testCases.MorepageTestCase">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.MorepageTestCase@3e11f9e9]" started-at="2023-12-16T00:32:41 IST" name="setup" finished-at="2023-12-16T00:32:51 IST" duration-ms="10604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="MorePageTest()[pri:0, instance:com.MyStore.testCases.MorepageTestCase@3e11f9e9]" started-at="2023-12-16T00:32:51 IST" name="MorePageTest" finished-at="2023-12-16T00:32:59 IST" duration-ms="7665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MorePageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.MorepageTestCase@3e11f9e9]" started-at="2023-12-16T00:32:59 IST" name="tearDown" finished-at="2023-12-16T00:32:59 IST" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.MorepageTestCase -->
+      <class name="com.MyStore.testCases.AddToCartTestCase_MoreTC">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.MyStore.testCases.AddToCartTestCase_MoreTC@1de5f259]" started-at="2023-12-16T00:32:59 IST" name="setup" finished-at="2023-12-16T00:33:10 IST" duration-ms="10154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addToCartTest()[pri:0, instance:com.MyStore.testCases.AddToCartTestCase_MoreTC@1de5f259]" started-at="2023-12-16T00:33:10 IST" name="addToCartTest" finished-at="2023-12-16T00:33:11 IST" duration-ms="1887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.MyStore.testCases.AddToCartTestCase_MoreTC@1de5f259]" started-at="2023-12-16T00:33:11 IST" name="tearDown" finished-at="2023-12-16T00:33:12 IST" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.MyStore.testCases.AddToCartTestCase_MoreTC -->
+    </test> <!-- MyShop Test -->
+  </suite> <!-- MyShop Test Suite -->
 </testng-results>
