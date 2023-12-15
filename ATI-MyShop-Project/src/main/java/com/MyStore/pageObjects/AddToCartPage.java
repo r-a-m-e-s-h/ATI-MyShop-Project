@@ -17,10 +17,22 @@ public class AddToCartPage extends BaseClass{
 	@FindBy(xpath="//a//span[text()='More']")
 	WebElement Morebtn;
 	
-	public MorePage clickOnMoreBtn()
+	@FindBy(xpath="//a[@class=\"product_img_link\"]//following::img")
+	WebElement searchResultProduct;
+
+	
+	
+	
+	public AddToCartPage clickOnSearchResultProduct()
+	{
+		Action.click(driver, searchResultProduct);
+		return new AddToCartPage();
+	}
+	
+	public MorePage_Through_AddToCartPage clickOnMoreBtn()
 	{
 		Action.click(driver, Morebtn);
-		return new MorePage();
+		return new MorePage_Through_AddToCartPage();
 	}
 	
 

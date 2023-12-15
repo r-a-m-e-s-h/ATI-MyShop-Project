@@ -25,16 +25,11 @@ public class searchResultPage extends BaseClass {
 	{
 		return Action.isDisplayed(driver, searchResultProduct);
 	}
-	
-	public AddToCartPage clickOnSearchResultProduct()
+	public AddToCartPage hoverOnSearchProduct()
 	{
-		Action.click(driver, searchResultProduct);
+		Action.moveToElement(driver, searchResultProduct);
 		return new AddToCartPage();
 	}
 	
-	public MorePage clickOnMoreBtn()
-	{
-		Action.click(driver, Morebtn);
-		return new MorePage();
-	}
+	
 }

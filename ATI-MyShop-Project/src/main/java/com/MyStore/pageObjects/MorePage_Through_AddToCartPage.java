@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 import com.MyStore.actionDriver.Action;
 import com.MyStore.baseClass.BaseClass;
 
-public class MorePage extends BaseClass{
+public class MorePage_Through_AddToCartPage extends BaseClass{
 	
-	public MorePage() {
+	public MorePage_Through_AddToCartPage() {
 		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//span[contains(text(),'Proceed to checkout')]")
+	@FindBy(xpath="//span[contains(text(),\"Proceed to checkout\")]")
 	WebElement checkOutBtn;
 	
 	@FindBy(xpath="//a//span[text()='More']")
@@ -34,11 +34,12 @@ public class MorePage extends BaseClass{
 	
 	public void enterQuantity(String required)
 	{
-		Action.type(Morebtn, required);
+		
+		Action.type(quantity, required);
 	}
 	public void SelctSize(String Requiredsize)
 	{
-		Action.SelectByValue(size, Requiredsize);
+		Action.SelectByVisibleText(size, Requiredsize);
 	}
 	public AddToCartPage clickAddToCart()
 	{
@@ -47,11 +48,14 @@ public class MorePage extends BaseClass{
 	}
 	public boolean validateAddtoCArtSuccessMsg()
 	{
+		Action.fluentWait(driver, successMsg, 10);
 		return Action.isDisplayed(driver, successMsg);
 	}
 	public OrderPage clickonCheckOutBtn()
 	{
-		 Action.click(driver, checkOutBtn);
+		Action.fluentWait(driver, checkOutBtn, 10);
+		 //Action.click(driver, checkOutBtn);
+		 Action.jsClick(driver, checkOutBtn);
 		 return new OrderPage();
 	}
 	

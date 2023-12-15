@@ -1,13 +1,18 @@
 package com.MyStore.actionDriver;
 
 import java.time.Duration;
+import java.util.NoSuchElementException;
+import java.util.function.Function;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.MyStore.baseClass.BaseClass;
@@ -15,6 +20,55 @@ import com.MyStore.baseClass.BaseClass;
 public class Action extends BaseClass  {
 	
 	
+	public static boolean jsClick(WebDriver ldriver,WebElement element)
+	{
+		boolean flag=false;
+		try {
+			
+			JavascriptExecutor js = (JavascriptExecutor)ldriver;
+			js.executeScript("arguments[0].click();", element);
+			flag=true;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		finally
+		{
+			if(flag)
+			{
+				System.out.println("js click is perfomed ");
+			}
+			else
+			{
+				System.out.println(" js click not perfomed");
+			}
+		}
+		return flag;
+		
+	}
+	
+	public static void explicitWait(WebDriver ldriver,WebElement element)
+	{
+		WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public static void fluentWait(WebDriver ldriver,WebElement element, int seconds )
+	{
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(ldriver)
+								.withTimeout(Duration.ofSeconds(30))
+								.pollingEvery(Duration.ofSeconds(3))
+								.ignoring(NoSuchElementException.class);
+		wait.until(ExpectedConditions.visibilityOf(element));
+		element.click();
+	}
+	
+	public static void moveToElement(WebDriver ldriver,WebElement element )
+	{
+		Actions actions = new Actions(ldriver);
+		actions.moveToElement(element).build().perform();
+	}
 	
 	public static void quit(WebDriver ldriver)
 	{
@@ -128,6 +182,7 @@ public class Action extends BaseClass  {
 		}
 		return flag;
 	}
+	
 	public static boolean type(WebElement element, String txt)
 	{
 		boolean flag = false;
@@ -153,6 +208,7 @@ public class Action extends BaseClass  {
 		}
 		return flag;	
 	}
+	
 	public static boolean selectBysendKeys(WebElement element,String txt) 
 	{
 		boolean flag = false;
@@ -178,6 +234,7 @@ public class Action extends BaseClass  {
 		}
 
 	}
+	
 	public static boolean selectByIndex(WebElement element, int index)
 	{
 		boolean flag= false;
@@ -204,6 +261,7 @@ public class Action extends BaseClass  {
 		}
 
 	}
+	
 	public static boolean SelectByValue(WebElement element,String txt)
 	{
 		boolean flag= false;
@@ -230,6 +288,7 @@ public class Action extends BaseClass  {
 		}
 
 	}
+	
 	public static boolean SelectByVisibleText(WebElement element,String txt)
 	{
 		boolean flag= false;
@@ -256,6 +315,7 @@ public class Action extends BaseClass  {
 		}
 
 	}
+	
 	public static void JSClick(WebElement element,WebDriver ldriver)
 	{
 		boolean flag=false;
@@ -281,6 +341,7 @@ public class Action extends BaseClass  {
 		}
 			
 	}
+	
 	public static boolean switchToFrameByIndex(int index)
 	{
 		boolean flag=false;
@@ -305,6 +366,7 @@ public class Action extends BaseClass  {
 			}
 		}
 	}
+	
 	public static boolean switchToFrameByName(String txt)
 	{
 		boolean flag=false;
@@ -329,6 +391,7 @@ public class Action extends BaseClass  {
 			}
 		}
 	}
+	
 	public static boolean switchToDefaultFrame()
 	{
 		boolean flag=false;

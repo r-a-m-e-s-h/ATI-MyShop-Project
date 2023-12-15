@@ -11,6 +11,11 @@
 <class name="com.MyStore.testCases.LoginTestCase" />
 <class name ="com.MyStore.testCases.HomepageTestCase" />
 <class name ="com.MyStore.testCases.AccountCreationPageTestCase" />
+<class name= "com.MyStore.testCases.SearchResultPageTestCase" />
+<class name = "com.MyStore.testCases.MorepageTestCase" />
+<class name = "com.MyStore.testCases.AddToCartTestCase_MoreTC" />
+<class name = "com.MyStore.testCases.OrderPageTestCase" />
+
 
 </classes>
 
