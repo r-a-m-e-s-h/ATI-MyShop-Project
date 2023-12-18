@@ -24,9 +24,15 @@ public class LoginTestCase extends BaseClass{
 	@Test
 	public void loginTest() throws InterruptedException
 	{
+		
+		logger.info("In the Index page");
+		
 		ip= new indexPage();
 		lp = ip.clickSigin();
+		logger.info("clicked on the sign in btn");
 		hp=lp.login(properties.getProperty("UserName"), properties.getProperty("PassWord"));
+		logger.info("Entered the username and password ");
+		
 	}
 	
 	
@@ -34,6 +40,7 @@ public class LoginTestCase extends BaseClass{
 	public void tearDown()
 	{
 		driver.quit();
+		logger.info("closed browser");
 	}
 	
 	

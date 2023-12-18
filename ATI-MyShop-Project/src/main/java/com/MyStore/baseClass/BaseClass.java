@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,6 +21,8 @@ public class BaseClass {
 	public static WebDriver driver;
 	
 	public static Properties properties;
+	
+	public static Logger logger = Logger.getLogger("MyShop_Logs");
 	
 	@BeforeTest
 	public void loadConfig()
@@ -37,6 +41,9 @@ public class BaseClass {
 	
 	public static void launchApplication()
 	{
+		PropertyConfigurator.configure("log4j.properties");
+		logger.info("driver Initiated");
+		
 		String browserName = properties.getProperty("BrowserName");
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
@@ -50,10 +57,13 @@ public class BaseClass {
 		}
 		
 		driver.manage().window().maximize();
+		logger.info("driver Maximized");
 		driver.manage().deleteAllCookies();
+		logger.info("deleted old cookies");
 		Action.implicitWait(driver, 10);
 		Action.pageLoad(driver, 50);
 		driver.get(properties.getProperty("BaseURL"));
+		logger.info("My Shop URL Launched");
 		
 		
 	}
