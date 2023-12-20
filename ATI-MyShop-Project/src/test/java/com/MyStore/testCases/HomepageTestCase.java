@@ -16,17 +16,17 @@ public class HomepageTestCase extends BaseClass{
 	LoginPage lp;
 	HomePage hp;
 	
-	@BeforeMethod
+	@BeforeMethod(groups="Smoke")
 	public void setup()
 	{
 		launchApplication();
 	}
-	@AfterMethod
+	@AfterMethod(groups="Smoke")
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	@Test
+	@Test(groups = "Smoke")
 	public void oderHistoryTest()
 	{
 		ip =new indexPage();
@@ -35,7 +35,7 @@ public class HomepageTestCase extends BaseClass{
 		boolean result = hp.validateoderHistoryIsDisplayed();
 		Assert.assertTrue(result);
 	}
-	@Test
+	@Test(groups = "Smoke")
 	public void personalInformationTest()
 	{
 		ip =new indexPage();

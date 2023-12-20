@@ -24,7 +24,7 @@ public class BaseClass {
 	
 	public static Logger logger = Logger.getLogger("MyShop_Logs");
 	
-	@BeforeTest
+	@BeforeTest(groups={"Smoke","Sanity","Regression"})
 	public void loadConfig()
 	{
 		properties = new Properties();

@@ -15,13 +15,13 @@ public class LoginTestCase extends BaseClass{
 	indexPage ip;
 	HomePage hp;
 	
-	@BeforeMethod
+	@BeforeMethod(groups={"Sanity","Smoke"})
 	public void setup()
 	{
 		launchApplication();
 	}
 	
-	@Test
+	@Test(groups={"Sanity","Smoke"})
 	public void loginTest() throws InterruptedException
 	{
 		
@@ -36,7 +36,7 @@ public class LoginTestCase extends BaseClass{
 	}
 	
 	
-	@AfterMethod
+	@AfterMethod(groups={"Sanity","Smoke"})
 	public void tearDown()
 	{
 		driver.quit();

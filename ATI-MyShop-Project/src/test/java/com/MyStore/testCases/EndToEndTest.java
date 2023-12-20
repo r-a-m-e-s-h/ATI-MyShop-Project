@@ -33,17 +33,17 @@ public class EndToEndTest extends BaseClass{
 	OrderConfirmationPage orderConfirmation;
 	
 
-	@BeforeMethod
+	@BeforeMethod(groups="Regression")
 	public void setup()
 	{
 		launchApplication();
 	}
-	@AfterMethod
+	@AfterMethod(groups="Regression")
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	@Test
+	@Test(groups="Regression")
 	public void endToendTest() throws InterruptedException
 	{
 		index =new indexPage();

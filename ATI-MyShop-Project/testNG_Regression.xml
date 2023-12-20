@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "MyShop Test Suite">
+
+<test name = "MyShop Test">
+
+<groups>
+
+<run>
+
+<include name="Regression"></include>
+
+</run>
+
+</groups>
+
+<classes>
+
+
+<class name="com.MyStore.testCases.IndexTestCase" />
+<class name="com.MyStore.testCases.LoginTestCase" />
+<class name ="com.MyStore.testCases.HomepageTestCase" />
+<class name ="com.MyStore.testCases.AccountCreationPageTestCase" />
+<class name= "com.MyStore.testCases.SearchResultPageTestCase" />
+<class name = "com.MyStore.testCases.MorepageTestCase" />
+<class name = "com.MyStore.testCases.AddToCartTestCase_MoreTC" />
+<class name = "com.MyStore.testCases.OrderPageTestCase" />
+
+
+</classes>
+
+
+</test>
+
+</suite>
+
