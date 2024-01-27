@@ -4,10 +4,13 @@ import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.MyStore.actionDriver.Action;
@@ -20,7 +23,13 @@ public class BaseClass {
 	
 	public static Properties properties;
 	
-	@BeforeTest
+	@BeforeSuite(groups= {"Smoke","Sanity","Regression"})
+	public void beforeSuite()
+	{
+		PropertyConfigurator.configure("log4j.properties");
+	}
+	
+	@BeforeTest(groups= {"Smoke","Sanity","Regression"})
 	public void loadConfig()
 	{
 		properties = new Properties();
@@ -32,6 +41,7 @@ public class BaseClass {
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	

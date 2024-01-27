@@ -19,17 +19,17 @@ public class AccountCreationPageTestCase extends BaseClass{
 	
 	
 	
-	@BeforeMethod
+	@BeforeMethod(groups="Sanity")
 	public void setup()
 	{
 		launchApplication();
 	}
-	@AfterMethod
+	@AfterMethod(groups="Sanity")
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	@Test
+	@Test(groups="Sanity")
 	public void verifyAccountCreationTest()
 	{
 		ip = new indexPage();

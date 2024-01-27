@@ -33,17 +33,17 @@ public class EndToEndTest extends BaseClass{
 	OrderConfirmationPage orderConfirmation;
 	
 
-	@BeforeMethod
+	@BeforeMethod(groups="Regression")
 	public void setup()
 	{
 		launchApplication();
 	}
-	@AfterMethod
+	@AfterMethod(groups="Regression")
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	@Test
+	@Test(groups="Regression")
 	public void endToendTest() throws InterruptedException
 	{
 		index =new indexPage();
@@ -64,10 +64,6 @@ public class EndToEndTest extends BaseClass{
 		String ActualMsg = orderConfirmation.ValidateOrderSuccessTxt();
 		String expectedMsg = "Your order on My Shop is complete.";
 		Assert.assertEquals(ActualMsg, expectedMsg);
-		
-		
-		
-		
 		
 
 

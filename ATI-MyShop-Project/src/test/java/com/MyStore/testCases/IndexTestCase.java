@@ -13,13 +13,13 @@ public class IndexTestCase extends BaseClass{
 	
 	indexPage ip;
 	
-	@BeforeMethod
+	@BeforeMethod(groups = "Smoke")
 	public void setup()
 	{
 		launchApplication();
 	}
 	
-	@Test
+	@Test(groups = "Smoke")
 	public void validateLogo()
 	{
 		ip =  new indexPage();			
@@ -27,7 +27,7 @@ public class IndexTestCase extends BaseClass{
 		Assert.assertTrue(result);	
 		System.out.println("The Logo is Displayed");
 	}
-	@Test
+	@Test(groups="Smoke")
 	public void verifyTitle()
 	{
 		ip =  new indexPage();
@@ -36,7 +36,7 @@ public class IndexTestCase extends BaseClass{
 		System.out.println("The Page Title is : "+title);
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = "Smoke")
 	public void tearDown()
 	{
 		Action.quit(driver);

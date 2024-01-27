@@ -22,17 +22,17 @@ public class OrderPageTestCase extends BaseClass{
 	MorePage_Through_AddToCartPage mp;
 	OrderPage op;
 
-	@BeforeMethod
+	@BeforeMethod(groups="Regression")
 	public void setup()
 	{
 		launchApplication();
 	}
-	@AfterMethod
+	@AfterMethod(groups="Regression")
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	@Test
+	@Test(groups="Regression")
 	public void verifyPriceTest() throws InterruptedException
 	{
 		ip =new indexPage();

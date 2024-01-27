@@ -9,28 +9,39 @@ import com.MyStore.pageObjects.HomePage;
 import com.MyStore.pageObjects.LoginPage;
 import com.MyStore.pageObjects.indexPage;
 
+import Utility.Log;
+
 public class LoginTestCase extends BaseClass{
 	
 	LoginPage lp;
 	indexPage ip;
 	HomePage hp;
 	
-	@BeforeMethod
+	@BeforeMethod(groups= {"Smoke","Sanity"})
 	public void setup()
 	{
 		launchApplication();
 	}
 	
-	@Test
+	@Test(groups= {"Smoke","Sanity"})
 	public void loginTest() throws InterruptedException
 	{
+		Log.startTestCase("loginTest");
+		
 		ip= new indexPage();
+		
+		Log.info("user is on index page");
+		
 		lp = ip.clickSigin();
+		
+		Log.info("user clicked on signin btn");
+		
 		hp=lp.login(properties.getProperty("UserName"), properties.getProperty("PassWord"));
+		Log.info("user entered the login credentials");
 	}
 	
 	
-	@AfterMethod
+	@AfterMethod(groups= {"Smoke","Sanity"})
 	public void tearDown()
 	{
 		driver.quit();

@@ -17,17 +17,17 @@ public class AddToCartTestCase_MoreTC extends BaseClass {
 	AddToCartPage acp;
 	MorePage_Through_AddToCartPage mp;
 	
-	@BeforeMethod
+	@BeforeMethod(groups={"Regression","Sanity"})
 	public void setup()
 	{
 		launchApplication();
 	}
-	@AfterMethod
+	@AfterMethod(groups={"Regression","Sanity"})
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	@Test
+	@Test(groups={"Regression","Sanity"})
 	public void addToCartTest()
 	{
 		ip = new indexPage();

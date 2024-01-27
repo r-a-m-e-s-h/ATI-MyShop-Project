@@ -19,17 +19,17 @@ public class SearchResultPageTestCase extends BaseClass{
 	LoginPage lp;
 	searchResultPage sp;
 
-	@BeforeMethod
+	@BeforeMethod(groups="Smoke")
 	public void setUp()
 	{
 		launchApplication();
 	}
-	@AfterMethod
+	@AfterMethod(groups="Smoke")
 	public void tearDown()
 	{
 		driver.quit();
 	}
-	@Test
+	@Test(groups="Smoke")
 	public void productAvailabilityTest()
 	{
 		ip = new indexPage();

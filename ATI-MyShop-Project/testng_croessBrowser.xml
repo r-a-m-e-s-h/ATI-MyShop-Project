@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser Suite">
+  <test thread-count="5" name="ChormeTest">
+   <parameter name="broswerName" value="Chrome" ></parameter>
+    <classes>
+       <class name="com.MyStore.testCases.IndexTestCase"/>
+    </classes>
+    
+  </test> <!-- Test -->
+ 
+  <test thread-count="5" name="EdgeTest">
+   <parameter name="broswerName" value="Edge" ></parameter>
+  
+    <classes>
+       <class name="com.MyStore.testCases.IndexTestCase"/>
+    </classes>
+    </test>
+  
+</suite> <!-- Suite -->

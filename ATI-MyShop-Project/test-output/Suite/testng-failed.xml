@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.MyStore.testCases.IndexTestCase">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyTitle"/>
+          <include name="validateLogo"/>
+        </methods>
+      </class> <!-- com.MyStore.testCases.IndexTestCase -->
+      <class name="com.MyStore.testCases.SearchResultPageTestCase">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="productAvailabilityTest"/>
+        </methods>
+      </class> <!-- com.MyStore.testCases.SearchResultPageTestCase -->
+      <class name="com.MyStore.testCases.HomepageTestCase">
+        <methods>
+          <include name="oderHistoryTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.MyStore.testCases.HomepageTestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
