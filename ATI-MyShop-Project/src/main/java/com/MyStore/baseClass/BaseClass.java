@@ -18,7 +18,7 @@ import com.MyStore.actionDriver.Action;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	//Test
+	//Test1234
 	public static WebDriver driver;
 	
 	public static Properties properties;
