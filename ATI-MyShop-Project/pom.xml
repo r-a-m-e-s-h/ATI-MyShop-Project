@@ -13,8 +13,11 @@
           <version>3.0.0-M9</version>
           <configuration>
 			  <suiteXmlFiles>
-				  <suiteXmlFile>testNG.xml</suiteXmlFile>
+				  <suiteXmlFile>${xmlFiles}</suiteXmlFile>
 			  </suiteXmlFiles>
+			  <systemPropertyVariables>
+				  <appURL>${url}</appURL>
+			  </systemPropertyVariables>
 		  </configuration>
         </plugin>
       
